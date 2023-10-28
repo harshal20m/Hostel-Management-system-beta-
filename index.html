@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="imgSlider"></div>
+    <header class="header">
+        <a class="hostel" href="index.html">Hostel.in</a>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="registration.html">Login</a>
+            <a href="registration.html">Signup</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="aboutus.html">About Us</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Welcome to <span>Hostel Managment</span>System</h1>
+            <h1 style="position: absolute; font-size: 5rem; color: white;font-weight: 800; z-index: -1;">Welcome to <span style="font-weight: 900;color: white;">Hostel Managment</span>System</h1>
+            <form id="searchForm">
+                <input type="text" id="searchInput" name="searchInput" placeholder="Search a Place">
+                <button id="searchButton" type="submit">
+                    <i class='bx bx-search'></i>
+                </button>
+            </form>
+        </div>
+        
+    </section> 
+    <footer class="footer">
+        <div class="footer-text">
+            <p> &copy; 2023 Copyright : Team Hostel.in | All Rights Reserved.</p> 
+        </div>
+        <div class="footer-icon">
+            <p style="display: inline-block; align-items: center; font-size: 1.6rem;padding-right: 5px;">Contact us :</p>
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+        </div>
+   </footer>
+    
+
+
+
+   <script>
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            const searchQuery = document.getElementById("searchInput").value;
+
+            if (searchQuery.toLowerCase() === "pune") {
+                
+                window.location.href = "search.html";
+            } else {
+                alert("No matching results found. Please try again.");
+            }
+        });
+    });
+</script>
+</body>
+</html>
